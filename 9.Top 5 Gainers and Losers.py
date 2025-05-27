@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load dataset
-df = pd.read_csv(r"C:\Users\admin\Music\Guvi\Driven Stock Analysis\Data\data\merged_and_sorted.csv")
+df = pd.read_csv("merged_and_sorted.csv")
 df['date'] = pd.to_datetime(df['date'])
 df['month'] = df['date'].dt.to_period('M')
 
