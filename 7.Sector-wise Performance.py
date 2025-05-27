@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load main dataset
-df = pd.read_csv(r"C:\Users\admin\Music\Guvi\Driven Stock Analysis\Data\data\merged_and_sorted.csv")
+df = pd.read_csv("merged_and_sorted.csv")
 
 # Load sector mapping
-sector_df = pd.read_csv(r"C:\Users\admin\Music\Guvi\Driven Stock Analysis\Data\Sector_data.csv") 
+sector_df = pd.read_csv("Sector_data.csv") 
 
 # Convert date and extract year
 df['date'] = pd.to_datetime(df['date'])
