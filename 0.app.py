@@ -7,30 +7,12 @@ import seaborn as sns
 st.set_page_config(page_title="Stock Analysis Dashboard", layout="wide")
 plt.style.use("seaborn-v0_8")
 
-# --- Load Data Functions ---
-@st.cache_data
-def load_data(path):
-    df = pd.read_csv(path)
-    df['date'] = pd.to_datetime(df['date'])
-    df['year'] = df['date'].dt.year
-    df['month'] = df['date'].dt.to_period('M').astype(str)
-    return df
 
-@st.cache_data
-def load_sector_data(path):
-    df = pd.read_csv(path)
-    df['sector'] = df['sector'].str.title()
-    return df
-
-# --- File Paths (You can customize these in sidebar) ---
-data_path = st.sidebar.text_input("Enter Stock Data CSV Path", value=r"C:\Users\admin\Music\Guvi\Driven Stock Analysis\Data\data\merged_and_sorted.csv")
-sector_path = st.sidebar.text_input("Enter Sector Data CSV Path", value=r"C:\Users\admin\Music\Guvi\Driven Stock Analysis\Data\Sector_data.csv")
-
-df = load_data(data_path)
-sector_df = load_sector_data(sector_path)
+df = pd.read_csv("merged_and_sorted.csv")
+sector_df = pd.read_csv("Sector_data.csv")
 
 # --- Sidebar Navigation ---
-st.sidebar.title("Navigation")
+#st.sidebar.title("Navigation")
 tabs = [
     "Top 10 Gainers & Losers",
     "Volatility Analysis",
