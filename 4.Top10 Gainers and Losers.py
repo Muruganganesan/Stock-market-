@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Load the data
+# Load the data 
 df = pd.read_csv("merged_and_sorted.csv")
 
 # Convert 'date' to datetime and extract year
