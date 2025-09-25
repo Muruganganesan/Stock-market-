@@ -20,3 +20,5 @@ yaml_dir_path = r'C:\Users\admin\Music\Guvi\Data-Driven Stock Analysis\Data\data
 csv_file_path = '2024-11.csv'
 
 yaml_to_csv(yaml_dir_path, csv_file_path)
+
+#Murugan Ganesan
